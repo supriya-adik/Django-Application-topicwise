@@ -1,0 +1,34 @@
+{% extends 'BlogApp/base.html'%}
+{%block title_block%} {{post.title}}{%endblock%}
+{%block content_block%}
+
+   <h1> {{post.title |upper}}</h2>
+    <p> published on {{post.publish}} by {{post.author}}</p>
+    <hr>
+      {{post.body |title|linebreaks}}
+    <br>
+    <a href="/{{post.id}}/share" role="button" class="btn btn-lg btn-info">ShareByGmail</a>
+    <hr>
+   {% with comments.count as comments_count%}
+     <h2> {{comments_count}} Comment{{comments_count|pluralize}}</h2>
+   {%endwith%}
+   {%if comments%}
+    {%for comment in comments%}
+      Comment {{forloop.counter}} By {{comment.name}} on {{comment.created}}
+      <p class="comment">
+        {{comment.body|linebreaks}}
+       </p>
+     {%endfor%}
+    {%else%}
+      <h3>We are always Please for your Comment</h3>
+    {%endif%}
+     {%if csubmit%}
+        <h2>Thanks For commitng!!</h2>
+      {%else%}
+       <form method="post">
+       {{form.as_p}}
+       {%csrf_token%}
+       <input type="submit" class="btn btn-lg btn-success" value="Submit Comment">
+       </form>
+     {%endif%}
+{%endblock%}

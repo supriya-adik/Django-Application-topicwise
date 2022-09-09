@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'authApp/base.html' %}
+{% block body_block %}
+  <div class="container" align="center">
+    <h1> Thanks For Visiting DurgaExams....!</h1>
+    <form method="post"> 
+      <p> Anyway You are not spending more time with our websites! </p>
+
+       {% csrf_token %}
+       <a href="/accounts/login" class="btn btn-success"> Click Here For Login again..</a>
+    </form>
+   </div>
+{% endblock  %}

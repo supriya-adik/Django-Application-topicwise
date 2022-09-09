@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'cbvApp/results.html' %}
+<html>
+  {% block body_block %}
+      <h1> Book information..!!</h1>
+      {% for book in list_of_books %}
+          <ul>
+            <li><a href="/{{ book.id }}">{{ book.title }}</a></li>
+            <li>{{ book.author }}</li>
+            <li>{{ book.pages }}</li>
+            <li>{{ book.price }}</li>
+            <hr>
+          </ul>
+      {% endfor %}
+  {% endblock %}
+</html>

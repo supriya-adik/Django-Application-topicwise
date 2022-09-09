@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+<link rel="stylesheet" href="{% static 'css/feedback.css'%}">
+</head>
+<body>
+<form method="post">
+<div class="jumbotron">
+<h1>Registration Form</h1>
+{{form.as_p}}
+{% csrf_token %}
+<input type="submit" class="btn btn-dark" value="Submit">
+</div>
+</form>
+</body>
+</html>

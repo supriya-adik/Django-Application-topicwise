@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+<link rel="stylesheet" href="{% static 'css/index.css'%}">
+<style>
+body {
+    background-image:url('{%static "images/3.jpg"%}');
+    background-size:cover;
+}
+</style>
+</head>
+<body>
+<form method="post">
+  <h1>Movie Information</h1>
+  {%if movie_list %}
+  <table class="table table-bordered table-danger">
+    <thead lclass="thead-dark">
+      <th>Released Date</th>
+      <th>Movie Name</th>
+      <th>Hero</th>
+      <th>Heroin</th>
+      <th>Rating</th>
+    
+    </thead>
+    <tbody>
+      {% for movie in movie_list %}
+         <tr>
+           <td>{{movie.rdate}}</td>
+            <td>{{movie.moviename}}</td>
+            <td>{{movie.hero}}</td>
+            <td>{{movie.heroine}}</td>
+             <td>{{movie.rating}}</td>
+        
+        
+         </tr>
+
+      {% endfor %}
+
+    </tbody>
+  </table>
+  {% else %}
+  <p> No data found</p>
+  {% endif %}
+</form>
+</body>
+</html>

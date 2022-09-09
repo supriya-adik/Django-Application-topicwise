@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends 'cbvApp/base.html' %}
+{% block body_block %}
+   <h1> Company Data Insert/Update Form</h1>
+   <form method="post" enctype="multipart/form-data">
+      {{form.as_p}}
+      {% csrf_token %}
+       <input type="submit" name="" value="Insert/Update" class="btn btn-lg btn-primary">
+    </form> 
+{% endblock %}

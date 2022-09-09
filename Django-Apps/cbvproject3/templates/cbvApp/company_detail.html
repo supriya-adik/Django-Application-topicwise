@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'cbvApp/base.html'%}
+{% block  body_block %}
+     <h2> Company Information:</h2>
+     <h2>Company Name:{{company.name}} </h2>
+     <h2>Company Location:{{company.location}} </h2>
+     <h2>Company CEO:{{company.ceo}} </h2>
+     <a href="/update/{{company.id}}" class="btn btn-lg btn-success""> Update Record </a>
+     &nbsp;&nbsp;<a href="/delete/{{company.id}}" class="btn btn-lg btn-success""> Delete Record </a>
+
+{% endblock  %}

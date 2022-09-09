@@ -1,0 +1,27 @@
+<!doctype html>
+{%extends 'base.html'%}
+{% block body_block %}
+  <div class="container"align="center">
+    <table>
+        <thead>
+
+            <th> ENo</th>
+          <th> ENAME</th>
+          <th> ESAL</th>
+          <th> EAddress</th>
+
+        </thead>
+         {% for e in emp %}
+
+        <tbody>
+          <tr>
+              <td>{{e.eno}}</td>
+               <td>{{e.ename}}</td>
+               <td>{{e.esal}}</td>
+               <td>{{e.eaddr}}</td>
+          </tr>
+        </tbody>
+          {%endfor%}
+        </table>
+        </div>
+{% endblock %}

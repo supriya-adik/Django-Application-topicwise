@@ -1,0 +1,26 @@
+/* Font Family */
+.st-font {
+ font-family: 'Satisfy', cursive;
+}
+html,body {
+ height: 100%;
+}
+.container-fluid {
+ min-height: 100%;
+}
+a.nav-link {
+ color: whitesmoke;
+}
+
+.i-color {
+ color: chartreuse;
+}
+.ss-color {
+ color: silver;
+}
+a.nav-link {
+ color: whitesmoke;
+}
+a:hover {
+ color: #ed969e;
+}

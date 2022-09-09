@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+  <h1> Shopping Cart Items Information..!!</h1>
+  {% if request.session %}
+  <table>
+    <thead>
+    <th> Name</th>
+    <th> Quantity</th>
+    
+    </thead>
+    {% for key,value in request.session.items %}
+       <tbody>
+      <td>{{key|title}} </td>
+      <td>{{value}} </td>
+      
+    </tbody>
+ 
+    {% endfor %}
+     </table>
+     {% else %}
+     <p>No Data Found..</p>
+  {% endif %}
+{% endblock  %}

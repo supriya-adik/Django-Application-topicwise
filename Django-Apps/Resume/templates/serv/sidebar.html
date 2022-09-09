@@ -1,0 +1,31 @@
+{%load static%}
+<style>
+     a.nav-link {
+     color: whitesmoke;
+}
+a.nav-link:hover {
+    color: wheat;
+    font-weight: bold;
+    background-color: #856404;
+}
+a.nav-link.active {
+    color: black;
+    background-color: #ed969e;
+    font-weight: bold;
+}
+</style>
+<link rel="stylesheet" href="{% static 'serv/css/all.min.css'%}">
+         <div class="border-right border-warning h-100">
+        <div class="text-center">
+          <img src="{% static 'serv/images/profile.jpeg'%}" class="img-fluid rounded-circle mt-3" alt="profile picture"  height="50px" width="100px">
+        </div>
+    <h4 class="text-warning st-font"> Sonam Kashayap </h4>
+    <hr class="border-light"><br>
+
+    <nav class="nav flex-column text-center">
+        <a rel="stylesheet" href="{% url 'home' %}" class="nav-link {{home}}"> Home </a>
+        <a rel="stylesheet" href="{% url 'services' %}" class="nav-link {{services}}"> Services</a>
+        <a rel="stylesheet" href="{% url 'skill' %}"  class="nav-link {{skill}}"> Skill</a>
+        <a rel="stylesheet" href="{% url 'contact' %}" class="nav-link {{contact}}"> Contact</a>
+    </nav>
+         </div>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nameform</title>
+
+</head>
+<body>
+ <form action="/age">
+     <h1> Registration Page</h1>
+     {{form.as_p}}
+     {% csrf_token %}<br/><br/>
+     <input type="submit" name="Submit" id="submit">
+ </form>
+</body>
+</html>

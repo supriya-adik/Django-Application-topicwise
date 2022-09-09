@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%load blog_tags%}
+{%load static%}
+<html lang="en">
+<head>
+  <title>{%block title_block%} {% endblock%}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{%static "css/blog.css"%}">
+</head>
+<body>
+<div class="content">
+ <h1>News's Blog Content</h1>
+
+    {%block content_block%} {%endblock%}
+</div>
+<div class="sidebar">
+   <h1>News's Blog </h1>
+        <p> Here we can see Python Updations..</p>
+    <h6 class="posttag"> The Total Number Of Post Published Today :<span class="pcount">{%my_tag%}</span></h6>
+    <h3> Show Latest Post :</h3>
+    {%show_latest_post 100%}
+    <hr>
+    <h3> Most Comented Posts:</h3>
+     {%get_most_commented_posts as most_commented_post%}
+      <div>
+          {%for post in most_commented_post%}
+        <p><a href="{{post.get_absolute_url}}" class="lpost"> {{post.title}}</a> </p>
+          {%endfor%}
+      </div>
+    {%block sidebar_block%} {%endblock%}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

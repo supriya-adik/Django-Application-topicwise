@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ResultPage</title>
+</head>
+<body>
+<form action="">
+    {% if request.session%}
+    <h1> Thanks for providing information..</h1>
+    {% for key,value in request.session.items %}
+    <ul>
+     <li>{{key|upper}}</li>
+        <li>{{value|title}}</li>
+
+    </ul>
+
+    {% endfor %}
+    {% else %}
+    <p>Information Not Found...</p>
+    {% endif%}
+</form>
+</body>
+</html>

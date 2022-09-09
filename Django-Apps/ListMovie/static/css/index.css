@@ -1,0 +1,10 @@
+.container .jumbotron {
+    margin-top:60px;
+    background-color: teal;   
+}
+h1,p {
+    color:tomato;
+}
+form {
+    border:2px groove orangered;
+}

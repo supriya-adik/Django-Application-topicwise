@@ -1,0 +1,11 @@
+<!doctype html>
+{% extends 'cbvApp/base.html' %}
+{% block body_block %}
+  <h3> Are u sure to Delete:{{company.name}} </h3>
+  <form method="post">
+    {% csrf_token %}
+   <input type="submit" value="confirm" name="" class="btn btn-danger ">&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="/{{company.id}}" class="btn btn-success" role="button">Cancel</a>
+  </form>
+
+{% endblock  %}

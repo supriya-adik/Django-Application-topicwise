@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+<title>feedback</title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"></link>
+<link rel="stylesheet" href="{% static 'css/index.css' %}"></link>
+
+</head>
+<body>
+<form method="post"> 
+<div class="container" align="center">
+ <h1> Student Form</h1>
+{{form.as_p}}
+<input type="submit" name="submit" class="btn btn-md btn-dark">
+{% csrf_token %}
+</div>
+</body>
+</html>

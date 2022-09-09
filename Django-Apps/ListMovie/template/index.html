@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+<link rel="stylesheet" href="{% static 'css/index.css'%}">
+<style>
+/* body {
+    background:url('{%static 'images/3.jpg'%}');
+    background-size:cover;
+} */
+</style>
+</head>
+<body>
+<form method="post">
+<div class="container">
+  <div class="jumbotron">
+    <h1>DURGA Movies...</h1>
+    <p>Up to date Movies Information</p>
+    <a class="btn btn-primary btn-lg" href="/addmovie" role="button"> Add Movie</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-primary btn-lg" href="/listmovie" role="button"> List Movie</a>
+  </div>
+</div>
+</form>
+</body>
+</html>

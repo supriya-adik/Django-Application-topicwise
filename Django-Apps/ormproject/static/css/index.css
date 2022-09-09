@@ -1,0 +1,19 @@
+
+body {
+    background: #0c5460;
+}
+table,th,td {
+    border:3px solid crimson;
+    border-collapse: collapse;
+}
+th {
+    color:#ba8b00;
+    font-family:  "Lucida Grande", Verdana, Arial, sans-serif;
+    font-weight: bold;
+
+}
+td {
+    color:green;
+    margin: 4px;
+    padding: 14px;
+}

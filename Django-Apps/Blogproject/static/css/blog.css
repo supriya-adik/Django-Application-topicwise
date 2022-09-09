@@ -1,0 +1,55 @@
+
+body {
+    background: #0c5460;
+}
+.content{
+    width:60%;
+    background: #4e555b;
+    color:white;
+    padding: 20px;
+    float: left;
+    margin-bottom: 10px;
+}
+.tagbox {
+    display: inline-block;
+    border :2px solid #e4606d;
+}
+h1 {
+    color:wheat;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+}
+p{
+    color:chartreuse;
+    font-size: 25px;
+    font-family: "Arial Narrow";
+}
+.pt {
+    color:white;
+}
+h3 {
+    color:orange;
+    font-size: 25px;
+}
+ h2 {
+     color: white;
+     font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+ }
+.sidebar{
+    width:40%;
+    color:orange;
+    float: left;
+    background: #1e7e34;
+    padding: 20px;
+}
+
+.posttag {
+    color: orange;
+    font-size: 20px;
+}
+.pcount {
+    color: #6DDCBD;
+    font-size:30px;
+}
+.lpost {
+    color:seashell;
+}
